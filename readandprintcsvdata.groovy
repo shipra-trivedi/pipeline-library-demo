@@ -1,6 +1,6 @@
 package com.test.demo
 import java.io.File 
-String filepath="Hello.csv"
+String filepath="https://github.com/KirtiPhirke98/pipeline-library-demo/blob/master/Hello.csv"
 File myfile=new File(filepath)
 println myfile.text
 
