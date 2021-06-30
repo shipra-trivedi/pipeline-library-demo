@@ -2,6 +2,7 @@
 
 import com.cleverbuilder.GlobalVars
 import com.cleverbuilder.SampleClass
+import java.io.File 
 
 pipeline {
     agent any
