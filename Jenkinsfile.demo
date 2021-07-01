@@ -11,8 +11,7 @@ pipeline {
             steps {
                 echo 'Hello, world'
                 sayHello 'Kirti'
-                 new File("https://github.com/KirtiPhirke98/pipeline-library-demo/blob/master/vars/Hello.csv").eachLine {  
-         line -> println "$line"; }
+                cat Hello.csv
 
                 echo 'The value of foo is : ' + GlobalVars.foo
 
