@@ -1,8 +1,14 @@
 #!/usr/bin/env groovy
 
 def call(String name = 'human') {
-  new File(name).eachLine { line ->
-    println line
+  def filePath = readFile "Hello.csv"                   
+	def lines = filePath.readLines()
+	 def linesbyline = filePath.readLines() 
+      
+	for (line in linesbyline) {                                            
+                      
+                        println "$line"
+                        }  
 }
   echo "Hello, ${name}."
 }
