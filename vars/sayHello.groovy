@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def call(String name = 'human') {
-  new File("Hello.csv").eachLine { line ->
+  new File("vars/Hello.csv").eachLine { line ->
     println line
 }
 
