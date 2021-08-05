@@ -2,10 +2,8 @@
 pipeline {
        agent any
        stages{
-       
         stage("Checkout Code") {
-                               steps {
-                                        
+                               steps {        
    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shipra-trivedi/pipeline-library-demo.git']]])
                                     }
                                 }
@@ -19,14 +17,14 @@ pipeline {
     def lines = filePath.readLines()
     def linesbyline = filePath.readLines()
      
-    for (line in linesbyline) {                                           
-                     
-                        println "$line"
-                        }
-                                       }
+    for (line in linesbyline) {             
+                                 println "$line"
+                              }
             }
+          }
         }
        }
+       
        post {
         always {
            // emailext body: '${env.BUILD_URL} has result ${currentBuild.result}', subject: 'test email', to: 'kirti1234p@gmail.com'
@@ -35,6 +33,9 @@ pipeline {
           body: "${env.BUILD_URL} has result ${currentBuild.result}"
         }
     }
+       
 }   
+}
+}
 }
 }
