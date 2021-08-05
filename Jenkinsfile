@@ -6,7 +6,7 @@ pipeline {
         stage("Checkout Code") {
                                steps {
                                         
-                                          checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/KirtiPhirke98/pipeline-library-demo']]])
+   checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shipra-trivedi/pipeline-library-demo.git']]])
                                     }
                                 }
         stage("build")
@@ -14,7 +14,7 @@ pipeline {
             steps
             {
                   script{
-    git branch: 'master', url: ' https://github.com/KirtiPhirke98/pipeline-library-demo '
+    git branch: 'master', url: 'https://github.com/shipra-trivedi/pipeline-library-demo.git'
     def filePath = readFile "Hello.csv"                  
     def lines = filePath.readLines()
     def linesbyline = filePath.readLines()
