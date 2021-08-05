@@ -2,7 +2,11 @@
 
 def call(String str ) {
    
-	def filePath = readFile "${str}"                   
+	def fileLocation = 'str'
+def fileURL = new URL(fileLocation)
+def remoteFile = new File(fileURL.toURI())
+	
+	def filePath = readFile "${remoteFile}"                   
 	def lines = filePath.readLines()
 	 def linesbyline = filePath.readLines() 
       
