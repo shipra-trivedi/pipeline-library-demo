@@ -1,5 +1,5 @@
 
-@Library('Kirti-shared@master')_
+@Library('script@main')_
 pipeline {
        agent any
        stages{
